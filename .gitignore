@@ -1,3 +1,6 @@
+# Build folder
+/dist/*
+
 # Logs
 logs
 *.log
@@ -102,3 +105,9 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Mac stuff
+.DS_Store
+
+# environmental variables
+.env

@@ -1,0 +1,22 @@
+:global(body) {
+  background-color: white;
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+@media screen and (max-device-width: 750px) {
+  .container {
+    grid-template-columns: max-content 1fr;
+  }
+}
+
+.pageContent {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
