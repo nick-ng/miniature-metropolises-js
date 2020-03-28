@@ -4,14 +4,14 @@
   "description": "(m7e m10s) A way to play Tiny Towns online, JavaScript edition",
   "main": "index.js",
   "scripts": {
-    "back": "nodemon --ignore ./webpack.config.js --ignore src/ --ignore dist/ --delay 2 ./src/server.js",
+    "back": "nodemon --ignore ./webpack.config.js --ignore src/ --ignore dist/ --delay 2 ./server/server.js",
     "build": "NODE_ENV=production webpack",
     "prettier-check": "prettier -c \"**/*.js\"",
     "dev": "concurrently npm:back npm:front",
     "prettier-fix": "prettier --write \"**/*.js\"",
     "front": "webpack --watch",
     "heroku-postbuild": "npm run knex-migrate-prod && npm run build",
-    "server": "node ./src/server.js",
+    "server": "node ./server/server.js",
     "sim-deploy": "rm -rf node_modules && npm install && npm run heroku-postbuild && npm run server",
     "start": "npm run dev",
     "test": "npm run prettier-check"
