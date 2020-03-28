@@ -6,15 +6,13 @@
   "scripts": {
     "back": "nodemon --ignore ./webpack.config.js --ignore src/ --ignore dist/ --delay 2 ./server/server.js",
     "build": "NODE_ENV=production webpack",
-    "prettier-check": "prettier -c \"**/*.js\"",
     "dev": "concurrently npm:back npm:front",
-    "prettier-fix": "prettier --write \"**/*.js\"",
     "front": "webpack --watch",
     "heroku-postbuild": "npm run knex-migrate-prod && npm run build",
     "server": "node ./server/server.js",
     "sim-deploy": "rm -rf node_modules && npm install && npm run heroku-postbuild && npm run server",
     "start": "npm run dev",
-    "test": "npm run prettier-check"
+    "test": "echo 'No tests defined.'"
   },
   "repository": {
     "type": "git",
@@ -52,7 +50,14 @@
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
+    "husky": "^4.2.3",
     "nodemon": "^2.0.2",
-    "prettier": "^2.0.2"
+    "prettier": "^2.0.2",
+    "pretty-quick": "^2.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
