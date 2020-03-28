@@ -9,7 +9,7 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = {
   mode: process.env.NODE_ENV || 'production',
   devtool: 'source-map',
-  entry: './src/entry.jsx',
+  entry: './client/entry.jsx',
   output: {
     path: `${__dirname}/dist`,
     filename: 'bundle.js',
@@ -53,8 +53,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       title: siteTitle,
-      favicon: `${__dirname}/favicon.ico`,
-      template: './index.html',
+      favicon: `./client/static/favicon.ico`,
+      template: './client/static/index.html',
       inject: 'true',
     }),
   ],
