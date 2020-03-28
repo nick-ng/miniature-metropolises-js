@@ -1,10 +1,10 @@
-require('dotenv').config();
-const express = require('express');
-const compression = require('compression');
-const path = require('path');
+require("dotenv").config();
+const express = require("express");
+const compression = require("compression");
+const path = require("path");
 
-const { applyMiddlewares } = require('./middleware');
-const { applyRouters } = require('./router');
+const { applyMiddlewares } = require("./middleware");
+const { applyRouters } = require("./router");
 
 const app = express();
 const router = express.Router();
@@ -17,12 +17,12 @@ applyRouters(router);
 app.use(router);
 
 // serve static files
-app.use(express.static('assets'));
-app.use(express.static('dist'));
+app.use(express.static("assets"));
+app.use(express.static("dist"));
 
 // redirect all requests to index.html
 app.use((req, res) => {
-  res.sendFile(path.resolve(__dirname, '../dist/index.html'));
+  res.sendFile(path.resolve(__dirname, "../dist/index.html"));
 });
 
 // starting listening

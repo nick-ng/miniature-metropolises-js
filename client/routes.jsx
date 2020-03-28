@@ -1,9 +1,9 @@
-import React from 'react';
-import { BrowserRouter as Router, Switch, Route as R } from 'react-router-dom';
+import React from "react";
+import { BrowserRouter as Router, Switch, Route as R } from "react-router-dom";
 
-import css from './styles.css';
+import css from "./styles.css";
 
-import Nav from './components/nav';
+import Nav from "./components/nav";
 
 export default function App() {
   return (

@@ -34,25 +34,30 @@ https://docs.google.com/spreadsheets/d/1GDSNe-IIiIBfKvkbsz_oXphl8n-mcJEDoOasDYmF
   }
 }
 ```
+
 Other players `specialBuilding` is hidden unless they've already constructed it.
 
 ## Idea
 
-* &lt;game started&gt;
-* Game state: `choosing_tile, 1`,
-* Player 1 sends
+- &lt;game started&gt;
+- Game state: `choosing_tile, 1`,
+- Player 1 sends
+
 ```json
 {
   "phase": "choosing_tile",
   "color": "red"
 }
 ```
-* Receive new game state: `placing_tile, 1, red`
-* Player 2 sends
+
+- Receive new game state: `placing_tile, 1, red`
+- Player 2 sends
+
 ```json
 {
   "phase": "placing_tile",
   "position": 7
 }
 ```
-* Don't re-broadcast updated state until everyone has placed?
+
+- Don't re-broadcast updated state until everyone has placed?
