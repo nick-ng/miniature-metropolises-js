@@ -3,7 +3,7 @@ import { NavLink as NavLinkRRD } from "react-router-dom";
 
 import cx from "classnames";
 
-import objectWithoutProperties from "../../../src_common/utils/object-without-properties";
+import objectWithoutProperties from "../../../common/utils/object-without-properties";
 
 import css from "./styles.css";
 
