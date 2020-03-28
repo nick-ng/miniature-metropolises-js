@@ -12,6 +12,7 @@
     "server": "node ./server/server.js",
     "sim-deploy": "rm -rf node_modules && npm install && npm run heroku-postbuild && npm run server",
     "start": "npm run dev",
+    "storybook": "start-storybook",
     "lint": "eslint .",
     "test": "npm run lint && npm run test:frontend && npm run test:backend && npm run test:common",
     "test:frontend": "mocha ./client/**/*.test.js",
@@ -49,10 +50,13 @@
     "react-dom": "^16.0.0",
     "react-router-dom": "^5.1.2",
     "style-loader": "^0.13.1",
+    "styled-components": "^5.0.1",
     "webpack": "^4.42.0",
     "webpack-cli": "^3.3.11"
   },
   "devDependencies": {
+    "@storybook/addon-knobs": "^5.3.17",
+    "@storybook/react": "^5.3.17",
     "chai": "^4.2.0",
     "concurrently": "^5.1.0",
     "eslint": "^6.8.0",
