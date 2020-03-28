@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 
-import Header from '../header';
-import NavLink from './nav-link';
+import Header from "../header";
+import NavLink from "./nav-link";
 
-import css from './styles.css';
+import css from "./styles.css";
 
 const Nav = () => (
   <div className={css.navContainer}>
