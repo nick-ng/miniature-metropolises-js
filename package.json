@@ -12,7 +12,8 @@
     "server": "node ./server/server.js",
     "sim-deploy": "rm -rf node_modules && npm install && npm run heroku-postbuild && npm run server",
     "start": "npm run dev",
-    "test": "npm run test:frontend && npm run test:backend && npm run test:common",
+    "lint": "eslint .",
+    "test": "npm run lint && npm run test:frontend && npm run test:backend && npm run test:common",
     "test:frontend": "mocha ./client/**/*.test.js",
     "test:backend": "mocha ./server/**/*.test.js",
     "test:common": "mocha ./src_common/**/*.test.js"
@@ -54,6 +55,10 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "concurrently": "^5.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.19.0",
     "husky": "^4.2.3",
     "mocha": "^7.1.1",
     "nodemon": "^2.0.2",
