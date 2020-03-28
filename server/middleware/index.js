@@ -1,4 +1,4 @@
-const applyMiddlewares = (app) => {};
+const applyMiddlewares = () => {};
 
 module.exports = {
   applyMiddlewares,

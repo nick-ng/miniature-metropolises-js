@@ -1,4 +1,4 @@
-const applyRouters = (router) => {};
+const applyRouters = () => {};
 
 module.exports = {
   applyRouters,
