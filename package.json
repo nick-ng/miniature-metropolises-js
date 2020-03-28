@@ -15,7 +15,7 @@
     "test": "npm run test:frontend && npm run test:backend && npm run test:common",
     "test:frontend": "mocha ./client/**/*.test.js",
     "test:backend": "mocha ./server/**/*.test.js",
-    "test:common": "mocha ./src_common/**/*.test.js"
+    "test:common": "mocha ./common/**/*.test.js"
   },
   "repository": {
     "type": "git",
