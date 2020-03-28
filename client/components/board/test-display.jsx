@@ -54,7 +54,12 @@ export default class BoardDisplayTest extends React.Component {
 
     return (
       <div>
-        <form onSubmit={this.submitHandler}>
+        <form
+          style={{
+            marginBottom: '5px',
+          }}
+          onSubmit={this.submitHandler}
+        >
           <label>
             Board State
             <input
